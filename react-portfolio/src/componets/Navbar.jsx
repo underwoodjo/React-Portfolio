@@ -1,3 +1,4 @@
+// To get started, imported react, downloaded react-icons and followed the installation instructions. The ran npm run dev again once installing a new package. Then we copied the <AiOutlineMenu /> component from usage part of the page to make the hamburger menu as seen below. Next we imported <AiOutlineHome />, <AiOutlineProject /> and <AiOutlineMail />. These all put out icons on the page.
 import React, { useState } from "react";
 import {
   AiOutlineMenu,
