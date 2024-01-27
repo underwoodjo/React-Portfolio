@@ -6,12 +6,14 @@ import {
   AiOutlineProject,
   AiOutlineMail,
 } from "react-icons/ai";
+// added useState to the import above, set as false by default. useState is a Hook that allows you to have state variables in functional components. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value. useState is a Hook. We call it inside a function component to add some local state to it. React will preserve this state between re-renders. useState returns a pair: the current state value and a function that lets you update it. You can call this function from an event handler or somewhere else. It’s similar to this.setState in a class, except it doesn’t merge the old and new state together. 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
     console.log("testing state");
   };
+//   Below, we have applied our icons to the navbar. We have also applied the hamburger menu to the mobile view. We have also applied the links to the icons. <AiOutlineMenu /> is the hamburger menu. <AiOutlineHome />, <AiOutlineProject /> and <AiOutlineMail /> are the icons. The hrefs are the links to the icons. The className is the styling for the icons. The onClick is the function that makes the hamburger menu work. The <div> is the styling for the hamburger menu. The <a> tags are the links for the hamburger menu. The className is the styling for the hamburger menu. The <span> is the text for the hamburger menu. We applied md:hidden to the hamburger/<AiOutlineMenu /> so that it only shows up on the mobile view. It disappears when the screen gets larger and then re-appears when the screen gets smaller. When the screen gets larger the side nav icons appear. {nav ? (Here is where we inserted the function/setting for the hamburger menu) : ("") } The part applied after the colons sets in motion for the side nav bar to appear
   return (
     <div>
       <AiOutlineMenu
@@ -46,6 +48,7 @@ const Navbar = () => {
         ""
       )}
       <div className="md:block hidden fixed top-[25%] z-20">
+        {/* We used a column to organize the icons */}
         <div className="flex flex-col">
           <a
             href="#main"
